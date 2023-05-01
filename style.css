@@ -1,0 +1,481 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400&display=swap');
+
+
+:root{
+    --primary-color:#8CC461;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    background: var(--primary-color);
+    font-family: 'Roboto', sans-serif;
+}
+
+.game-box{
+    width: 800px;
+    max-width: 100%;
+}
+
+.score-container{
+    border: 2px solid #FFFFFF;
+    border-radius: 13px;
+    padding: 18px 20px;
+}
+
+
+.score-container h1{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.5rem;
+    line-height: 43px;
+    letter-spacing: 0.1em;
+}
+
+.score-box{
+    width: 139px;
+    height: 128px;
+    text-align: center;
+    background: #FFFFFF;
+    border-radius: 9px;
+}
+
+.score-box h1{
+    font-weight: 700;
+        font-size: 68px;
+        text-align: center;
+        color: #252525;
+}
+
+.game{
+    position: relative;
+    height: 280px;
+    width: 310px;
+    margin: auto;
+
+}
+
+.game .rock{
+    top: 0%;
+    left: 0%;
+}
+
+.rock{
+    background-color: #0074B6;
+}
+
+.game .scissor{
+    top: 0%;
+    right: 0%;
+}
+
+.scissor{
+    background-color: #BD00FF;
+}
+
+.game .paper{
+    bottom: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.paper{
+    background-color: #FFA943;
+}
+
+.choice-icon{
+    border-radius: 50%;
+    padding: 12px;
+    width: 115px;
+    height: 115px;
+    cursor: pointer;
+    position: absolute;
+    
+}
+
+.choice-icon span{
+    display: inline-block;
+    background: #FFFFFF;
+    box-shadow: inset 3px 0px 21px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.choice-icon img{
+    /* width: 50px; */
+    height: 50px;
+}
+
+/* .choice-icon::after{
+    content: "";
+    height: 6px;
+    width: 200px;
+    background-color: gray;
+    position: absolute;
+}
+
+.rock::after{
+    top: 50%;
+    left: 70%;
+    z-index: -1;
+}
+
+.scissor::after{
+    transform: rotateZ(135deg);
+    left: -69px;
+    z-index: -1;
+    top: 100px;
+}
+
+.paper::after{
+    transform: rotate(-135deg);
+} */
+
+
+.control-btns{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    gap: 28px;
+}
+
+.control-btns button{
+    border: 2px solid #FFFFFF;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 25px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+    background: transparent;
+    padding: 6px 24px;
+}
+
+.game-rules{
+    display: none;
+    position: absolute;
+    width: 350px;
+    bottom: 70px;
+    padding: 1.5rem;
+    right: 5px;
+    background: #004429;
+    border: 7px solid #FFFFFF;
+    border-radius: 13px;
+    color: #ffffff;
+}
+.close-rules{
+    position: absolute;
+    width: 58px;
+    height: 58px;
+    right: -27px;
+    top: -26px;
+    display: flex;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    background: #FF0000;
+    border: 5px solid #FFFFFF;
+    cursor: pointer;
+}
+
+.game-rules div span{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #FFD600;
+    flex-shrink: 0;
+    margin-top: 15px;
+}
+
+.game-area{
+    display: none;
+}
+
+.game-area button{
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0.1em;
+    padding: 14px 26px;
+    color: #6B6B6B;
+    background: #FFFFFF;
+    border-radius: 9px;
+    border: none;
+    margin-top: 13px;
+}
+
+
+.game-area .win_lose h1{
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+}
+
+.game-area .win_lose h4 {
+    font-size: 1.4rem;
+}
+
+.game-area .choice-icon{
+    position: relative;
+    width: 140px !important;
+    height: 140px !important;
+    
+}
+
+.game-area .choice-icon h5{
+    position: absolute;
+        top: -40px;
+        left: 50%;
+        text-align: center;
+        width: 100%;
+        transform: translateX(-50%);
+        font-size: 1.1rem;
+}
+
+/* .game-area .choice-icon span{
+    width: 140px;
+    height: 140px;
+} */
+
+/* .game-area .win span{
+    width: 165px;
+    height: 165px;
+border: 25px solid #279B27;
+}
+
+.game-area .win span::after {
+    content: "";
+    width: 140%;
+    height: 140%;
+    background: rgba(29, 168, 43, 0.79);
+    position: absolute;
+    z-index: -1;
+    border-radius: 50%;
+}
+
+.game-area .win span::before {
+    content: "";
+    width: 165%;
+    height: 165%;
+    background: rgba(46, 154, 37, 0.39);
+        box-shadow: 0px 1px 62px rgba(0, 0, 0, 0.13);
+    position: absolute;
+    z-index: -1;
+    border-radius: 50%;
+} */
+
+
+
+.game-area .win {
+    width: 190px !important;
+    height: 190px !important;
+    border: 25px solid #279B27;
+    /* box-sizing: content-box; */
+}
+
+.game-area .win::after {
+    content: "";
+        width: 160%;
+        height: 160%;
+        background: rgba(29, 168, 43, 0.79);
+        position: absolute;
+        z-index: -1;
+        border-radius: 50%;
+        top: -30%;
+        left: -30%;
+}
+
+.game-area .win::before {
+    content: "";
+        width: 180%;
+        height: 180%;
+        background: rgba(46, 154, 37, 0.39);
+        box-shadow: 0px 1px 62px rgba(0, 0, 0, 0.13);
+        position: absolute;
+        top: -40%;
+        left: -40%;
+        z-index: -1;
+        border-radius: 50%;
+}
+
+/* win screen */
+#win_screen{
+    display: none;
+    width: 100%;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #ffffff;
+}
+
+#win_screen h1{
+
+    font-weight: 600;
+        font-size: 91px;
+        line-height: 107px;
+        text-align: center;
+        letter-spacing: 0.1em;
+}
+
+#win_screen h2{
+    font-weight: 600;
+        font-size: 41px;
+        line-height: 48px;
+        text-align: center;
+        letter-spacing: 0.1em;
+}
+
+.resetGame{
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0.1em;
+    padding: 14px 26px;
+    color: #6B6B6B;
+    background: #FFFFFF;
+    border-radius: 9px;
+    border: none;
+    margin-top: 3rem;
+}
+
+#next{
+    display: none;
+}
+
+/* 
+#one,#two,#three{
+    position: absolute;
+    width: 250px;
+    height: 8px;
+    background-color: #252525;
+}
+
+#one{
+    
+}
+.game .rock{
+    top: -47px;
+    left: -37px;
+    z-index: 1;
+}        
+
+.game .paper {
+    right: -41px;
+    top: -68px;
+    transform: rotateZ(60deg) !important;
+    transform: translateX(-50%);
+}
+/*
+#two{
+    transform: rotateZ(60deg);
+    transform-origin: left;
+}
+
+#three{
+    transform: rotateZ(-60deg);
+    transform-origin: right;
+} */
+
+
+@media screen and (max-width:768px) {
+    .score-container h1 {
+        font-size: 1.5rem;
+    }
+    .score-box h1 {
+        font-weight: 700;
+        font-size: 45px;
+    }
+    .score-box p{
+        margin-bottom: 0.6rem;
+    }
+
+        .game-area .choice-icon {
+            width: 110px !important;
+            height: 110px !important;
+        }
+    
+        .game-area .win {
+            width: 160px !important;
+            height: 160px !important;
+        }
+
+                .control-btns {
+                    position: fixed;
+                    right: 20px;
+                    bottom: 20px;
+                    gap: 28px;
+                }
+                                #win_screen h1 {
+                
+                                    font-size: 4rem;
+                                    line-height: 90px;
+                                }
+                
+                                #win_screen h2 {
+                                    font-size: 2rem;
+                                    line-height: 40px;
+                                }
+}
+
+@media screen and (max-width:568px) {
+    .score-container {
+        border: 2px solid #FFFFFF;
+        border-radius: 13px;
+        flex-direction: column;
+        gap: 20px;
+        padding: 18px 20px;
+    }
+
+    .rps-head {
+        display: flex;
+        gap: 15px;
+
+    }
+
+    .rps-head h1 {
+        font-size: 1.2rem;
+    }
+
+    .game {
+        height: 234px;
+        width: 264px;
+
+    }
+
+    .choice-icon {
+        width: 100px;
+        height: 100px;
+    }
+
+    .game-area {
+        flex-wrap: wrap;
+    }
+
+    .winloseParent {
+        order: 3;
+        margin: auto;
+        margin-top: 5px;
+    }
+
+    .game-area .choice-icon {
+        width: 110px !important;
+        height: 110px !important;
+    }
+
+    .game-area .win {
+        width: 160px !important;
+        height: 160px !important;
+    }
+
+    #win_screen{
+        padding: 1rem;
+    }
+    
+    
+    
+}    
