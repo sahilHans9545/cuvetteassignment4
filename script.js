@@ -33,17 +33,17 @@ choiceIcon.forEach((element) => {
     let cScore = parseInt(compScore.innerHTML);
     let yScore = parseInt(yourScore.innerHTML);
     if (choice == "s") {
-      picked.src = "./assets/scissorIcon.png";
+      picked.src = "./scissorIcon.png";
       youSelected.classList.add("scissor");
       youSelected.classList.remove("rock");
       youSelected.classList.remove("paper");
     } else if (choice == "r") {
-      picked.src = "./assets/fistIcon.png";
+      picked.src = "./fistIcon.png";
       youSelected.classList.add("rock");
       youSelected.classList.remove("scissor");
       youSelected.classList.remove("paper");
     } else {
-      picked.src = "./assets/handIcon.png";
+      picked.src = "./handIcon.png";
       youSelected.classList.add("paper");
       youSelected.classList.remove("scissor");
       youSelected.classList.remove("rock");
@@ -61,17 +61,17 @@ choiceIcon.forEach((element) => {
     };
 
     if (obj[comp_picked] == "s") {
-      compPicked.src = "./assets/scissorIcon.png";
+      compPicked.src = "./scissorIcon.png";
       compSelected.classList.add("scissor");
       compSelected.classList.remove("rock");
       compSelected.classList.remove("paper");
     } else if (obj[comp_picked] == "r") {
-      compPicked.src = "./assets/fistIcon.png";
+      compPicked.src = "./fistIcon.png";
       compSelected.classList.add("rock");
       compSelected.classList.remove("scissor");
       compSelected.classList.remove("paper");
     } else {
-      compPicked.src = "./assets/handIcon.png";
+      compPicked.src = "./handIcon.png";
       compSelected.classList.add("paper");
       compSelected.classList.remove("scissor");
       compSelected.classList.remove("rock");
